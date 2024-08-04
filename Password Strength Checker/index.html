@@ -5,14 +5,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h2>Password Strength Checker</h2>
-    <form>
-      <label for="password">Enter Password:</label>
-      <input type="password" id="password" oninput="check()">
-      <div id="strength"></div>
-    </form>
-  </div>
-  <script src="script.js"></script>
+    <video autoplay muted loop id="bgVideo">
+        <source src="Background video.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <h2>Password Strength Checker</h2>
+        <form>
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" oninput="check()">
+            <div id="strength"></div>
+            <div class="text">
+            <ul id="criteria">
+                <li id="length" class="invalid">At least 12 characters</li>
+                <li id="uppercase" class="invalid">At least one uppercase letter</li>
+                <li id="lowercase" class="invalid">At least one lowercase letter</li>
+                <li id="number" class="invalid">At least one number</li>
+                <li id="special" class="invalid">At least one special character</li>
+            </ul>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
